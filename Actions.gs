@@ -1,5 +1,5 @@
 const environment_vars = PropertiesService.getScriptProperties();
-const DOCUMENT_ID = "1vBBThG9yQxRJDkeJ2CPmKKw562mNMBb5yNod4ORQ94c";
+const DOCUMENT_ID = "[insert google doc id]";
 const Email_EiCconfig = {
     name: 'Bot',
     noReply: true,
@@ -49,7 +49,7 @@ function myFunction() {
   }
   Logger.log(info);
 
-  DriveApp.getFileById(tempFileId).setTrashed(true); // If you want to delete the tempolary document, please use this.
+  DriveApp.getFileById(tempFileId).setTrashed(true); // If you want to delete the temporary document, please use this.
   // DriveApp.createFile(); // This is used for automatically detecting the scope by the script editor.
   let newChanges = checkNewChanges(info);
   Logger.log(newChanges);
